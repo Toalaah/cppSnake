@@ -7,17 +7,7 @@ const int width = 60;
 const int height = 20;
 int playing = 1;
 int score = 0;
-int fruitX;
-int fruitY;
-int x;
-int prevX;
-int prevY;
-int prevX1;
-int prevY1;
-int y;
-int keyInput;
-int body[100][2];
-int drawn;
+int fruitX, fruitY, x, prevX, prevY, prevX1, prevY1, y, keyInput, body[100][2], drawn;
 int xdir = 0;
 int ydir = 0;
 enum direction { STOP = 0,
@@ -120,13 +110,6 @@ void input()
         case 'd':
             dirPrev = dir;
             dir = RIGHT;
-            break;
-        case 'f':
-            dirPrev = dir;
-            dir = STOP;
-            break;
-        case 't':
-            newF();
             break;
         default:
             dir = dir;
