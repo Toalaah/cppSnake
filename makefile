@@ -1,8 +1,8 @@
 all: main.cpp 
-	g++ -std=c++17 main.cpp -o bin/main -lncurses
+	g++ -std=c++17 main.cpp -o main -lncurses
 
 run: all
-	./bin/main
+	./main
 
 clean:
-	rm bin/main
+	rm main

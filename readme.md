@@ -6,8 +6,8 @@ Snake game written in C++ using the ncurses library. Pretty self-explanitory.
 
 ### Instructions
 
-To compile simply type `make` into your terminal. The executable will be saved under `bin/main`. Alternatively type `make run` to directly get into the game.    
-There are additional arguments which allow you to override the width, height, and speed of the game (see `./bin/main --help` or `./bin/main -h`), but I think the default values are pretty good as is.
+To compile simply type `make` into your terminal. The executable will be saved under `main`. Alternatively type `make run` to directly get into the game.    
+There are additional arguments which allow you to override the width, height, and speed of the game (see `./main --help` or `./main -h`), but I think the default values are pretty good as is.
 
 ### Controls
 
