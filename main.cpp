@@ -3,22 +3,12 @@
 #include <string>
 #include <unistd.h>
 #include <vector>
-#include <time.h>
 #include <utility>
 #include <iomanip>
-#include <string.h>
 
 static int UPS = 30;
 static int WIDTH = 30;
 static int HEIGHT = 30;
-const static std::vector<std::string> validArgs {"--help", "-h", "-r", "-c", "u"};
-
-
-bool inArgs(std::string s, std::vector<std::string> v)
-{
-
-  return true;
-}
 
 enum direction { NONE, LEFT, RIGHT, UP, DOWN };
 
@@ -37,7 +27,7 @@ void init_colors()
 {
   start_color();
   init_pair(1, COLOR_WHITE, COLOR_BLACK); // snake
-  init_pair(2, COLOR_RED, COLOR_BLACK); // fruit 
+  init_pair(2, COLOR_RED, COLOR_BLACK);   // fruit 
 }
 
 void init_snake(snake_t *snake, int w, int h) { snake->x = w/2; snake->y = h/2; }
@@ -100,10 +90,10 @@ void display_board(WINDOW *w, snake_t *snake, std::pair<int, int> &fruit)
 {
   bool occupied;
   box(w, 0, 0);
-  for(int i = 0; i < HEIGHT; i++) // h
+  for(int i = 0; i < HEIGHT; i++)
   {
     wmove(w, 1 + i, 1);
-    for(int j = 0; j < WIDTH; j++) // w
+    for(int j = 0; j < WIDTH; j++)
     {
       occupied = false;
       for(auto & p : snake->body) 
