@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ncurses.h>
-#include <string>
+#include <cstring>
 #include <unistd.h>
 #include <vector>
 #include <utility>
@@ -146,13 +146,13 @@ int main(int argc, char **argv)
     int i = 1; 
     while(i < argc)
     {
-      if(!(std::strcmp(argv[i],"--help")) || !(std::strcmp(argv[i],"-h")))
+      if(!(strcmp(argv[i],"--help")) || !(strcmp(argv[i],"-h")))
         printHelp(argv[0]);
-      else if(!(std::strcmp(argv[i], "-c")))
+      else if(!(strcmp(argv[i], "-c")))
         WIDTH = atoi(argv[(i++)+1]);
-      else if(!(std::strcmp(argv[i], "-r")))
+      else if(!(strcmp(argv[i], "-r")))
         HEIGHT = atoi(argv[(i++)+1]);
-      else if(!(std::strcmp(argv[i], "-u")))
+      else if(!(strcmp(argv[i], "-u")))
         UPS = atoi(argv[(i++)+1]);
       else
         printInvalidArgs(argv[0]);
